@@ -38,7 +38,6 @@ async function app() {
 
         let browser = await puppeteer.launch(options);
         const page = await browser.newPage();
-        await page.setViewport({ width: 1366, height: 600 });
 
         console.log("Browser Opened!");
 
@@ -46,8 +45,9 @@ async function app() {
             console.log(req.body)
             res.status(200).end()
 
-            if (req.body.login == 0) {
+            if (req.body.login) {
                 await page.goto("https://my.soundful.com/")
+                console.log("OPen my.soundful.com/")
 
                 await delay(3000)
 
