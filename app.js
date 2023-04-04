@@ -46,7 +46,7 @@ async function app() {
             console.log(req.body)
             res.status(200).end()
 
-            if (req.body.login == true) {
+            if (req.body.login) {
                 await page.goto("https://my.soundful.com/")
 
                 await delay(3000)
@@ -61,7 +61,7 @@ async function app() {
                 }
             }
 
-            if(req.body.makeMusic == true){
+            if(req.body.makeMusic){
 
 
             await page.goto("https://my.soundful.com/templates")
@@ -116,7 +116,7 @@ async function app() {
 
             await delay(7000)
 
-            if(req.body.render == true){     
+            if(req.body.render){     
         
             console.log("Initializing Render Process...")
 
