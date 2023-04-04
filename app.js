@@ -17,12 +17,7 @@ api.use(bodyParser.json())
 
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms))
 
-let options = {
-    args: ['--no-sandbox', '--disable-setuid-sandbox'],
-    ignoreDefaultArgs: ['--disable-extensions'],
-    headless: true,
-    userDataDir: './ChromeSession'
-  };
+
 
 function isDirectoryEmpty(path) {
     return fs.readdirSync(path).length === 0;
@@ -33,6 +28,13 @@ app()
 async function app() {
 
     try {
+
+        var options = {
+            args: ['--no-sandbox', '--disable-setuid-sandbox'],
+            ignoreDefaultArgs: ['--disable-extensions'],
+            headless: true,
+            userDataDir: './ChromeSession'
+          };
 
         let browser = await puppeteer.launch(options);
         const page = await browser.newPage();
