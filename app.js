@@ -47,18 +47,16 @@ async function app() {
 
             if (req.body.login) {
                 await page.goto("https://my.soundful.com/")
-                console.log("OPen my.soundful.com/")
+                console.log("Open my.soundful.com/")
 
                 await delay(3000)
 
-                const log = await page.$('#mui-1');
-
-                if (log) {
                     await delay(3000)
                     await page.type('#mui-1', 'feliperosenek@gmail.com');
                     await page.type('#mui-2', 'Feliperosene2130*');
                     await page.click("button[type='submit']");
-                }
+                
+                    await delay(20000)
             }
 
             if(req.body.makeMusic){
