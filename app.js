@@ -49,7 +49,7 @@ async function app() {
                 await page.goto("https://my.soundful.com/")
                 console.log("Open my.soundful.com/")
 
-                await delay(3000)
+                await delay(15000)
 
                     await delay(3000)
                     await page.type('#mui-1', 'feliperosenek@gmail.com');
