@@ -4,10 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "render": "nodemon app.js  --render ok",
-    "get": "nodemon app.js  --get ok --name 'deephouse'",
-    "download": "nodemon app.js  --download ok ",
-    "start": " nodemon app.js"
+    "start": " node app.js"
   },
   "author": "",
   "license": "ISC",
