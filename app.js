@@ -46,7 +46,7 @@ async function app() {
             console.log(req.body)
             res.status(200).end()
 
-            if (req.body.login) {
+            if (req.body.login === true) {
                 await page.goto("https://my.soundful.com/")
 
                 await delay(3000)
