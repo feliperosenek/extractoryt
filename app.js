@@ -77,6 +77,7 @@ async function app() {
             templateName.forEach(function (element) {
                 if (element.textContent == req.body.templateName) {
                     template[i].click()
+                    console.log("CLICK OK")
                 }
 
                 i++
@@ -92,7 +93,7 @@ async function app() {
                 await page.click("#createTrackFAB")
                 await delay(2000)
                 await page.click("#pinWheelSimilar")
-                await delay(4000)
+                await delay(9000)
                 await page.type("input[type='number']", "0")
                 await page.keyboard.press('Backspace');
                 await page.keyboard.press('Backspace');
