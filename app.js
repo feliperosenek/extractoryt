@@ -36,8 +36,11 @@ async function app() {
             userDataDir: './ChromeSession'
           };
 
+         
+
         let browser = await puppeteer.launch(options);
         const page = await browser.newPage();
+        await page.setViewport({ width: 1366, height: 600 });
 
         console.log("Browser Opened!");
 
