@@ -72,12 +72,13 @@ async function app() {
             var template = await page.$$('div[data-testid="templateItem"]');
             var templateName = domPage.window.document.querySelectorAll('div[data-testid="templateItem"] > p');
 
+            console.log(templateName)
+
 
             var i = 0
             templateName.forEach(function (element) {
                 if (element.textContent == req.body.templateName) {
                     template[i].click()
-                    console.log("CLICK OK")
                 }
 
                 i++
