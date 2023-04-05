@@ -32,7 +32,7 @@ async function app() {
         var options = {
             args: ['--no-sandbox', '--disable-setuid-sandbox'],
             ignoreDefaultArgs: ['--disable-extensions'],
-            headless: false,
+            headless: true,
             userDataDir: './ChromeSession'
           };
 
