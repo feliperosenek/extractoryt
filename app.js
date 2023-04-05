@@ -77,7 +77,7 @@ async function app() {
 
             var i = 0
             templateName.forEach(function (element) {
-                if (element.textContent == req.body.templateName) {
+                if (element.textContent == req.body.templatename) {
                     template[i].click()
                 }
 
