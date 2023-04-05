@@ -56,7 +56,7 @@ async function app() {
                     await page.type('#mui-2', 'Feliperosene2130*');
                     await page.click("button[type='submit']");
                 
-                    await delay(20000)
+                    await delay(45000)
             }
 
             if(req.body.makeMusic){
