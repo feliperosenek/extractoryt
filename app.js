@@ -29,6 +29,10 @@ async function app() {
 
     try {
 
+        api.post('/', async (req, res) => {
+            console.log(req.body)
+            res.status(200).end()
+
         var options = {
             args: ['--no-sandbox', '--disable-setuid-sandbox'],
             ignoreDefaultArgs: ['--disable-extensions'],
@@ -36,17 +40,11 @@ async function app() {
             userDataDir: './ChromeSession'
           };
 
-         
-
         let browser = await puppeteer.launch(options);
         const page = await browser.newPage();
         await page.setViewport({ width: 1366, height: 600 });
 
         console.log("Browser Opened!");
-
-        api.post('/', async (req, res) => {
-            console.log(req.body)
-            res.status(200).end()
 
             if (req.body.login) {
                 await page.goto("https://my.soundful.com/")
