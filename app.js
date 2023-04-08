@@ -154,6 +154,7 @@ async function app() {
                 var element = buttonText[y].childNodes
                 if (element[0].nodeName == "SPAN") {
                     await getButtons[y].click()
+                    await delay(5000)
                     await page.click("button[data-testid='submitDialog']")
                     console.log("New Render! [" + (y + 1) + " > " + musicName.length + "]")
                     await delay(90000)
