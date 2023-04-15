@@ -175,6 +175,7 @@ async function app() {
 
     } catch (err) {
         console.log(err)
+        app()
     }
 }
 
