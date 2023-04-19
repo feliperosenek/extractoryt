@@ -36,7 +36,7 @@ async function app() {
         var options = {
             args: ['--no-sandbox', '--disable-setuid-sandbox'],
             ignoreDefaultArgs: ['--disable-extensions'],
-            headless: true,
+            headless: req.body.headless,
             userDataDir: './ChromeSession'
           };
 
@@ -105,6 +105,8 @@ async function app() {
                 page.click("button[data-testid='createPreview']")
                 await delay(40000)
                 page.click("button[data-testid='save']")
+                console.log("Aguardabdo 2:30min")
+                await delay(180000)
                 console.log("Music create!")
                 x++
             }
